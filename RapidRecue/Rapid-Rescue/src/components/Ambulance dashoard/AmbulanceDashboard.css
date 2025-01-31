@@ -1,0 +1,286 @@
+/* 🚑 Ambulance Dashboard - Scoped to `.ambulance-dashboard` */
+.ambulance-dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f6fa;
+}
+
+/* 📌 Sidebar (Fixed on Left) */
+.ambulance-dashboard .ambulance-sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* 📌 Dashboard Content */
+.ambulance-dashboard .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 20px;
+}
+
+/* 🚨 Header Section */
+.ambulance-dashboard .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+/* 🚀 Status Toggle - Now in Header */
+.ambulance-dashboard .status-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ambulance-dashboard .status-label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ambulance-dashboard .status-value {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.ambulance-dashboard .status-value.available {
+    background: #28a745;
+    color: white;
+}
+
+.ambulance-dashboard .status-value.unavailable {
+    background: #dc3545;
+    color: white;
+}
+
+/* ✅ Toggle Switch */
+.ambulance-dashboard .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.ambulance-dashboard .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ambulance-dashboard .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.ambulance-dashboard .slider:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.ambulance-dashboard input:checked + .slider {
+    background-color: #28a745;
+}
+
+.ambulance-dashboard input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* 🚨 Alerts Section - Below Header */
+.ambulance-dashboard .alerts-section {
+    flex: 2;
+    padding: 20px;
+}
+
+/* 🚨 Centered Alert Cards */
+.ambulance-dashboard .alerts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 🔥 Alert Cards */
+.ambulance-dashboard .alert-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+/* 📌 Alert Header */
+.ambulance-dashboard .alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ambulance-dashboard .alert-id {
+    font-size: 16px;
+    font-weight: bold;
+    background: #ffcc00;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.ambulance-dashboard .status-badge {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.ambulance-dashboard .status-badge.pending {
+    background: #ffcccc;
+    color: #d9534f;
+}
+
+.ambulance-dashboard .status-badge.accepted {
+    background: #d4edda;
+    color: #28a745;
+}
+
+.ambulance-dashboard .status-badge.rejected {
+    background: #f8d7da;
+    color: #dc3545;
+}
+
+/* 🗺️ Incident Info */
+.ambulance-dashboard .incident-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ambulance-dashboard .map-view,
+.ambulance-dashboard .view-accident {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.ambulance-dashboard .map-view:hover,
+.ambulance-dashboard .view-accident:hover {
+    opacity: 0.7;
+}
+
+/* 🔘 Accept & Reject Buttons */
+.ambulance-dashboard .alert-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ambulance-dashboard .accept-alert {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 48%;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ambulance-dashboard .reject-alert {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 48%;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ambulance-dashboard .accept-alert:hover {
+    background: #218838;
+}
+
+.ambulance-dashboard .reject-alert:hover {
+    background: #c82333;
+}
+
+/* 🚨 Active Alerts Sidebar (Right) */
+.ambulance-dashboard .active-alerts-sidebar {
+    width: 250px;
+    background: white;
+    border-left: 1px solid #ddd;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🚨 Sidebar Title */
+.ambulance-dashboard .sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ✅ Respond Completed Button */
+.ambulance-dashboard .respond-completed {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ambulance-dashboard .respond-completed:hover {
+    background: #218838;
+}
+
+/* 🔥 Active Alerts List */
+.ambulance-dashboard .active-alerts ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.ambulance-dashboard .active-alert {
+    background: #ffcccc;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}

@@ -1,0 +1,284 @@
+/* General alert styling */
+.alert-card.waiting {
+  position: relative;
+  overflow: hidden;
+  border-left-color: #FFC107 !important;
+  animation: pulse-shadow 2s infinite ease-in-out;
+}
+
+/* Pulsing shadow animation */
+@keyframes pulse-shadow {
+  0%, 100% {
+    box-shadow: 0 3px 10px rgba(255, 193, 7, 0.1);
+  }
+  50% {
+    box-shadow: 0 3px 20px rgba(255, 193, 7, 0.3);
+  }
+}
+
+/* Border highlight animation */
+.alert-card.waiting .alert-left-border {
+  background-color: #FFC107 !important;
+  animation: border-pulse 2s infinite ease-in-out;
+}
+
+@keyframes border-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Subtle background pulsing effect */
+.alert-card.waiting::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 193, 7, 0.05);
+  animation: bg-pulse 2s infinite ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes bg-pulse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Ensure content is above animations */
+.alert-card.waiting .alert-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Improved hover animation for all alert cards */
+.alert-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+  margin-bottom: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.alert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Timer progress bar styling */
+.timer-progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(240, 240, 240, 0.9) !important;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.timer-progress {
+  height: 4px;
+  background-color: #FFC107;
+  transition: width 1s linear;
+}
+
+/* Timer animation */
+@keyframes timer-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Timer text styling */
+.timer-text {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #FFC107 !important;
+  text-align: right;
+  margin-bottom: 2px;
+}
+
+/* Status badge styling */
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.status-badge.accepted {
+  background-color: #4CAF50;
+  color: white;
+  animation: badgePop 0.3s ease-out;
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Timer container styling */
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+  margin-top: 4px;
+  background: none !important;
+}
+
+/* Alert entrance animations */
+@keyframes alertEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Alert card states */
+.alert-card.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.alert-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  animation: alertEntrance 0.5s ease-out forwards;
+}
+
+.alert-card.animating {
+  animation: alertEntrance 0.5s ease-out forwards;
+}
+
+/* Pulsing circle animation for timer */
+@keyframes pulsing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.timer-progress-circle.pulsing {
+  animation: pulsing 1s ease-in-out infinite;
+}
+
+/* Progress circle animation */
+.timer-progress-circle .progress-circle {
+  transition: stroke-dashoffset 1s linear;
+}
+
+/* New alert highlight animation */
+@keyframes newAlertHighlight {
+  0% {
+    background-color: rgba(255, 193, 7, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.alert-card.new-alert {
+  animation: newAlertHighlight 2s ease-out forwards;
+}
+
+/* Alert status transition animations */
+.alert-card.accepted {
+  animation: acceptAlert 0.5s ease-out forwards;
+}
+
+@keyframes acceptAlert {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.alert-card.rejected {
+  animation: rejectAlert 0.5s ease-out forwards;
+}
+
+@keyframes rejectAlert {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Action button animations */
+.alert-actions button {
+  transition: all 0.2s ease;
+}
+
+.alert-actions button:hover {
+  transform: scale(1.05);
+}
+
+.alert-actions button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .alert-card {
+    margin: 0.5rem 0;
+  }
+  
+  .alert-card.visible {
+    animation: alertEntranceMobile 0.5s ease-out forwards;
+  }
+}
+
+@keyframes alertEntranceMobile {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

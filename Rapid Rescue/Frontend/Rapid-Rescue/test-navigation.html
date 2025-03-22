@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Rescue - Navigation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .button:hover {
+            background-color: #3e8e41;
+        }
+        .info {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .warning {
+            background-color: #fffde7;
+            border-left: 6px solid #FFC107;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .error {
+            background-color: #ffebee;
+            border-left: 6px solid #F44336;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, Monaco, monospace;
+        }
+        .steps {
+            counter-reset: step-counter;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 10px;
+            list-style: none;
+            position: relative;
+            padding-left: 40px;
+            padding-bottom: 10px;
+        }
+        .steps li::before {
+            content: counter(step-counter);
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rapid Rescue Navigation Test</h1>
+        
+        <div class="info">
+            <p>This page allows you to directly test the navigation page with sample data. If the normal workflow isn't working, you can use these direct links to test different parts of the navigation system.</p>
+        </div>
+        
+        <h2>Test Options</h2>
+        <ol class="steps">
+            <li>
+                First, start the development server by running <code>npm run dev</code> in your terminal from the Rapid-Rescue directory.
+            </li>
+            <li>
+                Try the sample data test, which provides test data directly to the navigation component:
+                <a href="http://localhost:5173/ambulance-navigation-test" class="button">Navigation Test with Sample Data</a>
+            </li>
+            <li>
+                If that works, try the main navigation page which uses fallback data if no alert is provided:
+                <a href="http://localhost:5173/ambulance-navigation" class="button">Main Navigation Page</a>
+            </li>
+            <li>
+                Compare with the normal flow by starting from the dashboard:
+                <a href="http://localhost:5173/ambulance-dashboard" class="button">Ambulance Dashboard</a>
+            </li>
+        </ol>
+        
+        <h2>Troubleshooting</h2>
+        
+        <div class="warning">
+            <h3>If you see a blank screen:</h3>
+            <ol>
+                <li>Open your browser's developer tools (F12 or right-click → Inspect)</li>
+                <li>Check the Console tab for any error messages</li>
+                <li>Look for issues related to React, Google Maps API, or script loading</li>
+            </ol>
+        </div>
+        
+        <div class="info">
+            <h3>Common Google Maps Issues:</h3>
+            <p>If you see errors about Google Maps, it could be due to:</p>
+            <ul>
+                <li>API key issues (invalid or restricted key)</li>
+                <li>Network connectivity problems</li>
+                <li>Script loading failures</li>
+            </ul>
+            <p>The error handling added to the navigation component should display fallback content in these cases.</p>
+        </div>
+        
+        <div class="error">
+            <h3>Development Server Issues:</h3>
+            <p>If you can't start the development server with <code>npm run dev</code>, make sure:</p>
+            <ul>
+                <li>You're in the correct directory (Rapid-Rescue)</li>
+                <li>All dependencies are installed (<code>npm install</code>)</li>
+                <li>The dev script is defined in package.json</li>
+                <li>No other process is using port 5173</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

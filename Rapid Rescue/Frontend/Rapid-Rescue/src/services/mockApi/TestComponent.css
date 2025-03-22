@@ -1,0 +1,76 @@
+.test-component {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.test-component h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.test-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.test-section h2 {
+  color: #3498db;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.test-section p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  background-color: #1f6aa5;
+}
+
+@media (max-width: 768px) {
+  .test-component {
+    padding: 10px;
+  }
+  
+  .test-section {
+    padding: 10px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+} 

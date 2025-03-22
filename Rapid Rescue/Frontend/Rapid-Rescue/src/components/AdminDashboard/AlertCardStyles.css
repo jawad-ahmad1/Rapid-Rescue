@@ -1,0 +1,179 @@
+/* Admin Alert Card Styles */
+.admin-alert-card {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.admin-alert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Status-specific styling */
+.admin-alert-card.pending {
+  border-left: 4px solid #f39c12;
+}
+
+.admin-alert-card.assigned {
+  border-left: 4px solid #2ecc71;
+}
+
+.admin-alert-card.complete {
+  border-left: 4px solid #3498db;
+}
+
+/* Status badges */
+.admin-status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.admin-status-badge.pending {
+  background-color: #f39c12;
+  color: white;
+}
+
+.admin-status-badge.assigned {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.admin-status-badge.complete {
+  background-color: #3498db;
+  color: white;
+}
+
+/* View buttons */
+.admin-view-btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin-map-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.admin-map-btn:hover {
+  background-color: #2980b9;
+}
+
+.admin-accident-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.admin-accident-btn:hover {
+  background-color: #c0392b;
+}
+
+/* View details text */
+.admin-view-details-text {
+  color: #3498db;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin-view-details-text:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Alert content layout */
+.admin-alert-content {
+  padding: 12px;
+}
+
+.admin-alert-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.admin-alert-id-time {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.admin-alert-id {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.admin-alert-time-location {
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.admin-incident-info p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.admin-view-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin-alert-details p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+/* No alerts message */
+.admin-no-alerts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  gap: 15px;
+}
+
+.admin-no-alerts p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-alert-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .admin-status-badge {
+    align-self: flex-start;
+  }
+  
+  .admin-view-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+} 

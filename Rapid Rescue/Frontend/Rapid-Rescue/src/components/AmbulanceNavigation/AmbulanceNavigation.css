@@ -1,0 +1,789 @@
+/* Main Navigation Container */
+.ambulance-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.navigation-container {
+    flex: 1;
+    padding: 20px;
+    margin-left: 240px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Navigation Header */
+.navigation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-icon {
+    color: #4CAF50;
+    font-size: 24px;
+}
+
+.navigation-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-badge {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge.preparing {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.status-badge.en {
+    background-color: #2196F3;
+}
+
+.status-badge.completed {
+    background-color: #4CAF50;
+}
+
+.status-badge.cancelled {
+    background-color: #F44336;
+}
+
+.speedometer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.speed-normal {
+    color: #333;
+}
+
+.speed-high {
+    color: #F44336;
+    font-weight: 600;
+}
+
+/* Navigation Content */
+.navigation-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Map Styling */
+.navigation-map {
+    width: 100%;
+    height: calc(100vh - 140px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Info Window Styling */
+.info-window {
+    padding: 5px;
+    min-width: 150px;
+}
+
+.info-window h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.info-window p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Alert Card Styling */
+.nav-alert-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nav-alert-card-header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.nav-alert-number {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-alert-badge {
+    background-color: #FFC107;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-emergency-badge {
+    background-color: #FF5252;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.nav-alert-distance {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+.nav-alert-card-body {
+    padding: 20px;
+}
+
+.ambulance-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    color: #4CAF50;
+}
+
+.ambulance-svg {
+    font-size: 30px;
+}
+
+.location-details {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.from-location,
+.to-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.from-location p,
+.to-location p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.location-id {
+    color: #888;
+    font-size: 12px;
+    margin-top: 4px !important;
+}
+
+.location-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.start-dot {
+    background-color: #4CAF50;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+.end-dot {
+    background-color: #f44336;
+    box-shadow: 0 0 0 4px rgba(244, 67, 54, 0.2);
+}
+
+.location-connector {
+    width: 2px;
+    height: 30px;
+    background-color: #ddd;
+    margin: 0 0 0 5px;
+}
+
+/* Patient Information Section */
+.patient-info-section {
+    padding: 15px;
+    border-top: 1px dashed #ddd;
+    background-color: #f9f9f9;
+}
+
+.patient-info-section h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.patient-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.patient-detail-item {
+    font-size: 13px;
+    color: #555;
+}
+
+.patient-detail-item strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-icon {
+    color: #4CAF50;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Turn-by-turn directions */
+.turn-by-turn {
+    padding: 15px;
+    border-top: 1px dashed #ddd;
+    background-color: #f5f7fa;
+}
+
+.turn-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.turn-header h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-counter {
+    background-color: #2196F3;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.turn-instruction {
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.turn-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.turn-controls button {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #2196F3;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.turn-controls button:hover {
+    background-color: #1976D2;
+}
+
+.turn-controls button:disabled {
+    background-color: #B0BEC5;
+    cursor: not-allowed;
+}
+
+/* Alert Card Footer Styling */
+.nav-alert-card-footer {
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+}
+
+/* Button Styling for the info button and refresh button */
+.refresh-btn, .info-btn, .maps-btn {
+    background-color: #f0f0f0;
+    color: #555;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.refresh-btn:hover, .info-btn:hover, .maps-btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Start Navigation Button */
+.start-navigation-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.start-navigation-btn.full-width {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.start-navigation-btn:hover {
+    background-color: #3d9c40;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.start-navigation-btn.full-width:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Maps Button Styling */
+.maps-btn {
+    background-color: #2196F3;
+    color: white;
+    flex: 1;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.maps-btn:hover {
+    background-color: #0c87e0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.maps-btn:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Navigation Controls */
+.navigation-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.back-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Completion Buttons */
+.completion-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Button styling for Complete, Cancel, Emergency */
+.complete-btn,
+.cancel-btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Complete button */
+.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.complete-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Cancel button */
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.cancel-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Small Icon styling */
+.icon-small {
+    font-size: 16px;
+    min-width: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navigation-container {
+        margin-left: 0;
+        padding: 15px;
+    }
+    .nav-alert-card {
+        margin: 0 10px;
+    }
+    .completion-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Loading states */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    width: 100%;
+}
+
+.loading-map {
+    width: 100%;
+    height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #666;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Map Error State */
+.map-error {
+    width: 100%;
+    height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff0f0;
+    font-size: 16px;
+    color: #d32f2f;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ffcdd2;
+}
+
+.map-error-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #f44336;
+}
+
+/* Fix for Google Maps overflowing */
+.gm-style {
+    border-radius: 12px;
+    overflow: hidden !important;
+}
+
+/* Make sure InfoWindow content is readable */
+.gm-style-iw-d {
+    overflow: hidden !important;
+}
+
+.gm-style-iw-c {
+    padding: 12px !important;
+}
+
+/* Map Placeholder for when Google Maps is not available */
+.map-placeholder {
+    width: 100%;
+    height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    color: #666;
+    text-align: center;
+}
+
+.map-placeholder-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #90a4ae;
+}
+
+.map-placeholder-text h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #607d8b;
+}
+
+.map-placeholder-text p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Google Maps Link */
+.google-maps-link {
+    margin-top: 20px;
+}
+
+.google-maps-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4285F4;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.google-maps-button:hover {
+    background-color: #3367D6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* No Alert Container */
+.no-alert-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+}
+
+.no-alert-icon {
+    color: #90a4ae;
+    margin-bottom: 20px;
+}
+
+.no-alert-container h3 {
+    font-size: 24px;
+    color: #607d8b;
+    margin-bottom: 15px;
+}
+
+.no-alert-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #78909c;
+}
+
+.back-to-dashboard-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-dashboard-btn:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Accident Details Section */
+.accident-details {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-left: 3px solid #FFC107;
+}
+
+.accident-details-text {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .navigation-container {
+        background-color: #1a1a1a;
+    }
+
+    .nav-alert-card {
+        background-color: #2d2d2d;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-alert-card-header,
+    .nav-alert-card-footer {
+        background-color: #262626;
+        border-color: #404040;
+    }
+
+    .location-details {
+        background-color: #2d2d2d;
+    }
+
+    .from-location p,
+    .to-location p {
+        color: #e0e0e0;
+    }
+
+    small {
+        color: #a0a0a0;
+    }
+}

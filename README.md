@@ -23,7 +23,6 @@
 - [Configuration](#configuration)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## 🎯 Overview
 
@@ -626,9 +625,6 @@ We welcome contributions! Please follow these steps:
 - **Security**: Follow security best practices
 - **Performance**: Optimize for performance where possible
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -644,7 +640,7 @@ For support and questions:
 
 - **Issues**: [GitHub Issues](https://github.com/Talha-229/Rapid-Rescue/issues)
 - **Documentation**: See [COMPREHENSIVE-GUIDE.md](Rapid-Rescue-main/COMPREHENSIVE-GUIDE.md)
-- **Email**: Contact the development team
+- **Email**: javedtalha339@gmail.com
 
 ---
 

@@ -643,5 +643,40 @@ For support and questions:
 - **Email**: javedtalha339@gmail.com
 
 ---
+## 🎥 Demo Videos
+
+Experience the Rapid-Rescue system in action with these demo videos showcasing the AI accident detection capabilities:
+
+### 🚨 Accident Detection Demos
+
+#### Accident Detection - Demo 1
+
+[![Accident Detection Demo 1](https://img.shields.io/badge/Watch-Demo%201-red?style=for-the-badge)](Demo/accident1.mp4)
+**File**: [accident1.mp4](Demo/accident1.mp4)
+
+This demo shows the AI system detecting a real accident scenario with high confidence scoring and automatic alert generation.
+
+#### Accident Detection - Demo 2
+
+[![Accident Detection Demo 2](https://img.shields.io/badge/Watch-Demo%202-red?style=for-the-badge)](Demo/accident2.mp4)
+**File**: [accident2.mp4](Demo/accident2.mp4)
+
+Watch how the computer vision system processes different accident scenarios and triggers emergency response protocols.
+
+#### Accident Detection - Demo 3
+
+[![Accident Detection Demo 3](https://img.shields.io/badge/Watch-Demo%203-red?style=for-the-badge)](Demo/accident3.mp4)
+**File**: [accident3.mp4](Demo/accident3.mp4)
+
+Demonstrates the system's ability to detect various types of accidents and generate appropriate emergency alerts.
+
+### ✅ Non-Accident Detection Demo
+
+#### Normal Traffic Flow
+
+[![Normal Traffic Demo](https://img.shields.io/badge/Watch-Normal%20Traffic-green?style=for-the-badge)](Demo/non-accident.mp4)
+**File**: [non-accident.mp4](Demo/non-accident.mp4)
+
+This demo shows how the AI system correctly identifies normal traffic flow and avoids false positive alerts.
 
 **Made with ❤️ for emergency response coordination**

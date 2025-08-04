@@ -1,0 +1,386 @@
+/* AlertCardStyles.css - Enhanced styles for alert cards */
+
+/* Card base styles */
+.alert-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-left: 4px solid transparent;
+  position: relative;
+}
+
+.alert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.alert-card.waiting {
+  border-left-color: #FFC107;
+}
+
+.alert-card.accepted {
+  border-left-color: #4CAF50;
+}
+
+.alert-content {
+  flex: 1;
+  padding: 16px;
+}
+
+/* Header section */
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.alert-id-time {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.alert-id {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-time-location {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Status badges */
+.alert-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-badge.accepted {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Waiting status badge */
+.timer-status-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.timer-progress-circle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.timer-progress-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-progress-circle circle {
+  fill: none;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+}
+
+.timer-progress-circle .background-circle {
+  stroke: rgba(0, 0, 0, 0.08);
+}
+
+.timer-progress-circle .progress-circle {
+  stroke: #a79f97;
+  stroke-dasharray: 100;
+  transition: stroke-dashoffset 1s linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.timer-progress-circle.pulsing {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Incident info section */
+.incident-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.view-details-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.view-details-text:hover {
+  color: #1976D2;
+}
+
+.map-view, .view-accident {
+  display: flex;
+}
+
+.view-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Action buttons */
+.alert-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.accept-btn, .reject-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accept-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #388E3C;
+}
+
+.reject-btn {
+  background-color: #F44336;
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #D32F2F;
+}
+
+/* Specific styles for completed alerts */
+.responded-alerts-sidebar .alert-time-location {
+  color: #666;
+  font-size: 0.8rem;
+  white-space: normal;
+  word-break: break-word;
+  overflow: visible;
+  text-overflow: initial;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+
+/* Error message styling */
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff3f3;
+  border: 1px solid #ffcccb;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.error-message p {
+  color: #d32f2f;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.error-message button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.error-message button:hover {
+  background-color: #d32f2f;
+}
+
+/* No alerts styling */
+.no-alerts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.no-alerts p {
+  color: #757575;
+  font-weight: 500;
+}
+
+/* Completed alert card styles */
+.completed-alert-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #4CAF50;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.completed-alert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.completed-alert-card .alert-id {
+  font-weight: 600;
+  color: #424242;
+  margin-bottom: 6px;
+}
+
+.completed-alert-card .alert-time-location {
+  display: flex;
+  align-items: center;
+  color: #757575;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  gap: 6px;
+}
+
+.completed-alert-card .alert-time-location svg {
+  color: #4CAF50;
+  min-width: 14px;
+}
+
+/* Responsive styles for the sidebar */
+@media (max-width: 768px) {
+  .responded-alerts-sidebar {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .completed-alert-card {
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Loading spinner styles for responded alerts section */
+.loading-spinner.small {
+  transform: scale(0.7);
+  margin: 15px auto;
+}
+
+/* Add styling for the new loading animation */
+.loading-animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #ff5252;
+  border-radius: 50%;
+  animation: pulse 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+  }
+  
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+} 

@@ -1,0 +1,183 @@
+.alert-detail-view {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.alert-detail-view h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.alert-detail-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.alert-id {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.alert-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+
+.alert-status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.alert-status.assigned {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.alert-status.complete {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-status.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-icon {
+  color: #666;
+  margin-top: 3px;
+}
+
+.info-icon.response-time {
+  color: #4CAF50;
+}
+
+.info-icon.assigned {
+  color: #2196F3;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #666;
+  margin-right: 5px;
+}
+
+.info-value {
+  color: #333;
+}
+
+.info-value.response-time {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.info-value.assigned {
+  color: #2196F3;
+  font-weight: 600;
+}
+
+/* Video styles */
+.video-container {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.accident-video {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  background: #000;
+}
+
+/* Video error styles */
+.video-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.video-error svg {
+  font-size: 2em;
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+.video-error p {
+  color: #856404;
+  margin-bottom: 15px;
+}
+
+.download-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.download-link:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .alert-detail-view {
+    padding: 10px;
+  }
+
+  .alert-detail-card {
+    padding: 15px;
+  }
+
+  .alert-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .accident-video {
+    max-width: 100%;
+  }
+} 

@@ -1,0 +1,81 @@
+/* Color Fixes for Ambulance Dashboard */
+
+/* Status colors */
+.status-value.available {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.status-value.unavailable {
+  background-color: #F44336;
+  color: white;
+}
+
+/* Status badges */
+.status-badge.waiting {
+  background-color: #FFC107;
+  color: #333;
+}
+
+.status-badge.accepted {
+  background-color: #6c757d;
+  color: white;
+}
+
+.status-badge.rejected {
+  background-color: #F44336;
+  color: white;
+}
+
+.status-badge.completed {
+  background-color: #495057;
+  color: white;
+}
+
+/* Button colors */
+.accept-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #495057;
+}
+
+.accept-btn:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.reject-btn {
+  background-color: #F44336;
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #D32F2F;
+}
+
+/* Keep this style for the header but without the button-related parts */
+.alerts-header {
+  margin-bottom: 20px;
+}
+
+/* Map and accident view buttons */
+.map-btn:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.accident-btn:hover {
+  background-color: #fbe9e7;
+  color: #d84315;
+}
+
+/* Timer progress bar */
+.timer-progress {
+  background-color: #6c757d;
+} 

@@ -1,0 +1,201 @@
+INFO 2025-08-03 18:49:39,807 autoreload 11048 18872 Watching for file changes with StatReloader
+INFO 2025-08-03 18:50:11,476 autoreload 20008 13980 Watching for file changes with StatReloader
+INFO 2025-08-03 18:56:18,473 autoreload 1268 5496 Watching for file changes with StatReloader
+INFO 2025-08-03 18:59:37,080 autoreload 9696 6844 Watching for file changes with StatReloader
+INFO 2025-08-03 19:15:39,829 autoreload 8044 9540 Watching for file changes with StatReloader
+INFO 2025-08-03 19:18:58,879 autoreload 10324 17420 Watching for file changes with StatReloader
+INFO 2025-08-03 19:19:06,281 basehttp 10324 8720 "OPTIONS /api/auth/current-user/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:06,291 basehttp 10324 8720 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:06,292 basehttp 10324 11092 "OPTIONS /api/auth/current-user/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:06,296 basehttp 10324 8720 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:19:06,569 log 10324 11092 Unauthorized: /api/auth/current-user/
+WARNING 2025-08-03 19:19:06,569 log 10324 8720 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:19:06,574 basehttp 10324 11092 "GET /api/auth/current-user/ HTTP/1.1" 401 172
+WARNING 2025-08-03 19:19:06,583 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 401 172
+WARNING 2025-08-03 19:19:06,598 log 10324 8720 Unauthorized: /api/auth/current-user/
+WARNING 2025-08-03 19:19:06,604 log 10324 6256 Unauthorized: /api/drivers/
+INFO 2025-08-03 19:19:06,608 basehttp 10324 11092 "OPTIONS /api/auth/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:19:06,617 basehttp 10324 8720 "GET /api/auth/current-user/ HTTP/1.1" 401 172
+WARNING 2025-08-03 19:19:06,631 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 172
+WARNING 2025-08-03 19:19:06,644 log 10324 11092 Unauthorized: /api/auth/token/refresh/
+WARNING 2025-08-03 19:19:06,653 log 10324 8720 Unauthorized: /api/auth/token/refresh/
+WARNING 2025-08-03 19:19:06,659 basehttp 10324 11092 "POST /api/auth/token/refresh/ HTTP/1.1" 401 54
+WARNING 2025-08-03 19:19:06,663 basehttp 10324 8720 "POST /api/auth/token/refresh/ HTTP/1.1" 401 54
+INFO 2025-08-03 19:19:07,522 basehttp 10324 8720 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:07,524 basehttp 10324 11092 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:19:07,555 log 10324 11092 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:19:07,558 basehttp 10324 11092 "GET /api/drivers/ HTTP/1.1" 401 58
+WARNING 2025-08-03 19:19:07,568 log 10324 11092 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:19:07,580 basehttp 10324 11092 "GET /api/drivers/ HTTP/1.1" 401 58
+INFO 2025-08-03 19:19:16,679 basehttp 10324 11092 "OPTIONS /api/auth/admin-login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:19:20,112 log 10324 11092 Unauthorized: /api/auth/admin-login/
+WARNING 2025-08-03 19:19:20,113 basehttp 10324 11092 "POST /api/auth/admin-login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:19:32,784 basehttp 10324 11092 "OPTIONS /api/auth/admin-login/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:34,918 basehttp 10324 11092 "POST /api/auth/admin-login/ HTTP/1.1" 200 644
+INFO 2025-08-03 19:19:35,185 basehttp 10324 11092 "OPTIONS /api/alerts/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:35,357 basehttp 10324 11092 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:19:35,538 basehttp 10324 8720 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:19:39,516 basehttp 10324 8720 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:19:39,645 basehttp 10324 11092 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:19:44,829 basehttp 10324 11092 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:44,833 basehttp 10324 8408 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:44,834 basehttp 10324 6256 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:44,834 basehttp 10324 8720 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:44,865 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:19:44,887 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:19:44,907 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:19:44,935 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:19:55,036 basehttp 10324 8720 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:55,050 basehttp 10324 8720 "POST /api/auth/logout/ HTTP/1.1" 200 37
+INFO 2025-08-03 19:19:55,287 basehttp 10324 6256 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:19:55,287 basehttp 10324 8720 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:19:55,294 log 10324 6256 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:19:55,295 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+WARNING 2025-08-03 19:19:55,302 log 10324 6256 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:19:55,304 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+INFO 2025-08-03 19:20:05,892 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:20:08,425 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:20:08,426 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:20:21,123 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:20:23,256 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:20:23,258 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:20:28,230 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:20:30,506 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:20:30,507 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:20:35,158 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:20:37,242 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:20:37,244 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:20:40,109 basehttp 10324 8720 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:20:40,110 basehttp 10324 6256 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:20:40,132 log 10324 6256 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:20:40,141 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+WARNING 2025-08-03 19:20:40,161 log 10324 6256 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:20:40,178 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+INFO 2025-08-03 19:20:57,838 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:21:00,184 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:21:00,185 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:21:05,862 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:21:08,781 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:21:08,783 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:21:23,206 basehttp 10324 6256 "OPTIONS /api/auth/admin-login/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:26,540 basehttp 10324 6256 "POST /api/auth/admin-login/ HTTP/1.1" 200 644
+INFO 2025-08-03 19:21:27,106 basehttp 10324 6256 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:21:27,380 basehttp 10324 8720 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:21:35,129 basehttp 10324 8720 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:21:35,310 basehttp 10324 6256 "GET /api/alerts/ HTTP/1.1" 200 101927
+INFO 2025-08-03 19:21:35,782 basehttp 10324 6256 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:35,785 basehttp 10324 8720 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:35,788 basehttp 10324 8408 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:35,799 basehttp 10324 6256 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:35,826 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:21:35,872 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:21:35,909 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:21:35,942 basehttp 10324 8720 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:21:42,376 basehttp 10324 8720 "OPTIONS /api/drivers/17/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:42,382 basehttp 10324 6256 "OPTIONS /api/drivers/17/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:42,405 basehttp 10324 8720 "GET /api/drivers/17/ HTTP/1.1" 200 385
+INFO 2025-08-03 19:21:42,415 basehttp 10324 6256 "OPTIONS /api/drivers/17/performance/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:42,418 basehttp 10324 8408 "OPTIONS /api/drivers/17/history/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:21:42,423 basehttp 10324 8720 "GET /api/drivers/17/ HTTP/1.1" 200 385
+INFO 2025-08-03 19:21:42,494 basehttp 10324 8408 "GET /api/drivers/17/performance/ HTTP/1.1" 200 100
+INFO 2025-08-03 19:21:42,540 basehttp 10324 8408 "GET /api/drivers/17/performance/ HTTP/1.1" 200 100
+INFO 2025-08-03 19:21:42,557 basehttp 10324 6256 "GET /api/drivers/17/history/ HTTP/1.1" 200 8252
+INFO 2025-08-03 19:21:42,656 basehttp 10324 8408 "GET /api/drivers/17/history/ HTTP/1.1" 200 8252
+INFO 2025-08-03 19:21:42,919 basehttp 10324 2664 "GET /media/driver_photos/9703596_WMSj2es.png HTTP/1.1" 200 21013
+INFO 2025-08-03 19:21:51,500 basehttp 10324 8408 "GET /api/drivers/17/ HTTP/1.1" 200 385
+INFO 2025-08-03 19:21:51,516 basehttp 10324 8408 "GET /api/drivers/17/ HTTP/1.1" 200 385
+INFO 2025-08-03 19:22:00,043 basehttp 10324 8408 "POST /api/auth/logout/ HTTP/1.1" 200 37
+INFO 2025-08-03 19:22:00,305 basehttp 10324 8408 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:22:00,318 log 10324 6256 Unauthorized: /api/drivers/
+INFO 2025-08-03 19:22:00,334 basehttp 10324 8408 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:22:00,339 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+WARNING 2025-08-03 19:22:00,351 log 10324 6256 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:22:00,354 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+INFO 2025-08-03 19:22:09,043 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:22:11,137 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:22:11,137 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:22:33,656 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:22:35,514 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:22:35,515 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:22:43,176 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:22:45,100 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:22:45,101 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:23:04,310 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:23:08,351 log 10324 6256 Unauthorized: /api/auth/login/
+WARNING 2025-08-03 19:23:08,352 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-08-03 19:23:12,869 basehttp 10324 6256 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:23:12,885 basehttp 10324 8408 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:23:12,944 log 10324 6256 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:23:12,956 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+WARNING 2025-08-03 19:23:13,034 log 10324 6256 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:23:13,060 basehttp 10324 6256 "GET /api/drivers/ HTTP/1.1" 401 58
+INFO 2025-08-03 19:23:24,266 basehttp 10324 6256 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:23:26,666 basehttp 10324 6256 "POST /api/auth/login/ HTTP/1.1" 200 857
+INFO 2025-08-03 19:23:26,805 basehttp 10324 6256 "OPTIONS /api/alerts/my_active_alert/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:23:26,829 basehttp 10324 6256 "OPTIONS /api/alerts/pending/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:23:26,832 basehttp 10324 8408 "OPTIONS /api/alerts/pending/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:23:26,890 log 10324 8408 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:26,895 basehttp 10324 8408 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+INFO 2025-08-03 19:23:26,942 basehttp 10324 6256 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+WARNING 2025-08-03 19:23:26,954 log 10324 8408 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:26,997 basehttp 10324 8408 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+INFO 2025-08-03 19:23:26,998 basehttp 10324 8720 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+WARNING 2025-08-03 19:23:30,407 log 10324 8720 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:30,410 basehttp 10324 8720 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+WARNING 2025-08-03 19:23:30,482 log 10324 8720 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:30,563 basehttp 10324 8720 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+INFO 2025-08-03 19:23:30,611 basehttp 10324 8408 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+WARNING 2025-08-03 19:23:30,616 log 10324 6256 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:30,639 basehttp 10324 6256 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+INFO 2025-08-03 19:23:30,666 basehttp 10324 8408 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+WARNING 2025-08-03 19:23:30,676 log 10324 6256 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:30,681 basehttp 10324 6256 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+WARNING 2025-08-03 19:23:30,727 log 10324 6256 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:30,741 basehttp 10324 6256 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+WARNING 2025-08-03 19:23:30,757 log 10324 6256 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:23:30,758 basehttp 10324 6256 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+INFO 2025-08-03 19:23:31,339 basehttp 10324 6256 "GET /api/drivers/17/history/ HTTP/1.1" 200 8252
+INFO 2025-08-03 19:23:31,448 basehttp 10324 8408 "GET /api/drivers/17/history/ HTTP/1.1" 200 8252
+INFO 2025-08-03 19:23:33,175 basehttp 10324 8408 "OPTIONS /api/drivers/me/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:23:33,177 basehttp 10324 6256 "OPTIONS /api/drivers/me/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:23:33,206 basehttp 10324 8408 "GET /api/drivers/me/ HTTP/1.1" 200 385
+INFO 2025-08-03 19:23:33,224 basehttp 10324 8408 "GET /api/drivers/me/ HTTP/1.1" 200 385
+INFO 2025-08-03 19:23:33,226 basehttp 10324 2664 "GET /media/driver_photos/9703596_WMSj2es.png HTTP/1.1" 200 21013
+INFO 2025-08-03 19:23:34,916 basehttp 10324 8408 "GET /api/drivers/17/history/ HTTP/1.1" 200 8252
+INFO 2025-08-03 19:23:35,006 basehttp 10324 6256 "GET /api/drivers/17/history/ HTTP/1.1" 200 8252
+INFO 2025-08-03 19:27:27,006 basehttp 10324 6256 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-08-03 19:35:44,863 autoreload 15120 1200 Watching for file changes with StatReloader
+INFO 2025-08-03 19:36:00,294 basehttp 15120 17668 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:00,314 basehttp 15120 7232 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+WARNING 2025-08-03 19:36:00,363 log 15120 17668 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:36:00,372 basehttp 15120 17668 "GET /api/drivers/ HTTP/1.1" 401 58
+WARNING 2025-08-03 19:36:00,388 log 15120 17668 Unauthorized: /api/drivers/
+WARNING 2025-08-03 19:36:00,390 basehttp 15120 17668 "GET /api/drivers/ HTTP/1.1" 401 58
+INFO 2025-08-03 19:36:14,841 basehttp 15120 17668 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:18,933 basehttp 15120 17668 "POST /api/auth/login/ HTTP/1.1" 200 857
+WARNING 2025-08-03 19:36:19,335 log 15120 17668 Not Found: /api/alerts/my_active_alert/
+INFO 2025-08-03 19:36:19,335 basehttp 15120 7232 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+WARNING 2025-08-03 19:36:19,336 basehttp 15120 17668 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+WARNING 2025-08-03 19:36:19,360 log 15120 17668 Not Found: /api/alerts/my_active_alert/
+WARNING 2025-08-03 19:36:19,380 basehttp 15120 17668 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+INFO 2025-08-03 19:36:19,425 basehttp 15120 7232 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+INFO 2025-08-03 19:36:22,695 basehttp 15120 9992 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:22,695 basehttp 15120 7232 "OPTIONS /api/drivers/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:22,696 basehttp 15120 17668 "OPTIONS /api/auth/current-user/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:22,749 basehttp 15120 9992 "OPTIONS /api/auth/current-user/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:22,883 basehttp 15120 7232 "GET /api/auth/current-user/ HTTP/1.1" 200 387
+INFO 2025-08-03 19:36:22,890 basehttp 15120 17668 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:36:22,979 basehttp 15120 7232 "GET /api/auth/current-user/ HTTP/1.1" 200 387
+INFO 2025-08-03 19:36:23,167 basehttp 15120 17668 "GET /api/drivers/ HTTP/1.1" 200 2806
+INFO 2025-08-03 19:36:25,358 basehttp 15120 17668 "OPTIONS /api/auth/current-user/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:25,363 basehttp 15120 17668 "OPTIONS /api/auth/current-user/ HTTP/1.1" 200 0
+INFO 2025-08-03 19:36:25,393 basehttp 15120 17668 "GET /api/auth/current-user/ HTTP/1.1" 200 387
+INFO 2025-08-03 19:36:25,441 basehttp 15120 17668 "GET /api/auth/current-user/ HTTP/1.1" 200 387
+WARNING 2025-08-03 19:36:25,491 log 15120 7232 Not Found: /api/alerts/my_active_alert/
+INFO 2025-08-03 19:36:25,546 basehttp 15120 9992 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+WARNING 2025-08-03 19:36:25,573 basehttp 15120 7232 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+WARNING 2025-08-03 19:36:25,628 log 15120 7232 Not Found: /api/alerts/my_active_alert/
+INFO 2025-08-03 19:36:25,646 basehttp 15120 17668 "GET /api/alerts/pending/ HTTP/1.1" 200 29021
+WARNING 2025-08-03 19:36:25,660 basehttp 15120 7232 "GET /api/alerts/my_active_alert/ HTTP/1.1" 404 33
+INFO 2025-08-03 19:40:22,995 basehttp 15120 7232 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-08-03 19:44:23,032 basehttp 15120 7232 "POST /api/auth/token/refresh/ HTTP/1.1" 200 483

@@ -1,0 +1,53 @@
+/* Admin Color Fixes */
+
+/* Status value colors */
+.admin-status-value.pending {
+  background-color: #f39c12;
+}
+
+.admin-status-value.assigned {
+  background-color: #2ecc71;
+}
+
+.admin-status-value.complete {
+  background-color: #3498db;
+}
+
+/* Action button colors */
+.admin-action-btn.admin-map-btn {
+  background-color: #3498db;
+}
+
+.admin-action-btn.admin-accident-btn {
+  background-color: #e74c3c;
+}
+
+/* Stat card icon colors */
+.admin-stat-card:nth-child(1) .admin-stat-icon {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.admin-stat-card:nth-child(2) .admin-stat-icon {
+  background-color: rgba(243, 156, 18, 0.1);
+}
+
+.admin-stat-card:nth-child(3) .admin-stat-icon {
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+.admin-stat-card:nth-child(4) .admin-stat-icon {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+/* Alert card border colors */
+.admin-alert-card.pending .admin-alert-left-border {
+  background-color: #f39c12;
+}
+
+.admin-alert-card.assigned .admin-alert-left-border {
+  background-color: #2ecc71;
+}
+
+.admin-alert-card.complete .admin-alert-left-border {
+  background-color: #3498db;
+} 

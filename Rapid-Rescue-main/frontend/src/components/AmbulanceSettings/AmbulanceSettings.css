@@ -1,0 +1,653 @@
+/* Base Layout */
+.ambulance-dashboard {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.ambulance-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.ambulance-main-content {
+  flex: 1;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 20px;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+.ambulance-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Settings Page Styles */
+.ambulance-settings-wrapper {
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: calc(100vh - 40px);
+  transition: background-color 0.3s ease;
+}
+
+.ambulance-settings-header {
+  margin-bottom: 30px;
+}
+
+.ambulance-settings-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a237e;
+  transition: color 0.3s ease;
+}
+
+.ambulance-settings-header p {
+  color: #666;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.ambulance-settings-container {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Settings Section */
+.ambulance-settings-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ambulance-settings-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 15px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.ambulance-settings-section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 20px;
+  background-color: #4CAF50;
+  border-radius: 3px;
+}
+
+/* Profile Settings */
+.ambulance-profile-settings {
+  display: flex;
+  gap: 30px;
+}
+
+.ambulance-profile-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ambulance-profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4CAF50;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ambulance-change-photo-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.ambulance-change-photo-btn:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ambulance-profile-form {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.ambulance-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ambulance-form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.ambulance-form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+  background-color: white;
+  color: #333;
+}
+
+.ambulance-form-group input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Notification Settings */
+.ambulance-notification-settings,
+.ambulance-app-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ambulance-setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: border-color 0.3s ease;
+}
+
+.ambulance-setting-item:last-child {
+  border-bottom: none;
+}
+
+.ambulance-setting-info {
+  flex: 1;
+}
+
+.ambulance-setting-info h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.ambulance-setting-info p {
+  font-size: 13px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* Switch Toggle */
+.ambulance-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.ambulance-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ambulance-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.ambulance-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .ambulance-slider {
+  background-color: #4CAF50;
+}
+
+input:focus + .ambulance-slider {
+  box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .ambulance-slider:before {
+  transform: translateX(26px);
+}
+
+.ambulance-slider.round {
+  border-radius: 24px;
+}
+
+.ambulance-slider.round:before {
+  border-radius: 50%;
+}
+
+/* Action Buttons */
+.ambulance-settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ambulance-save-settings-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ambulance-save-settings-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ambulance-save-message {
+  display: none;
+  color: #4CAF50;
+  font-size: 14px;
+  font-weight: 500;
+  animation: ambulance-fadeIn 0.3s ease;
+}
+
+.ambulance-input-changed {
+  animation: ambulance-highlight 0.5s ease;
+}
+
+@keyframes ambulance-highlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+.ambulance-setting-feedback {
+  display: none;
+  color: #4CAF50;
+  font-size: 12px;
+  margin-left: 10px;
+  animation: ambulance-fadeIn 0.3s ease;
+}
+
+@keyframes ambulance-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Styles */
+body.ambulance-dark-mode .ambulance-settings-wrapper {
+  background-color: #1a1a1a;
+}
+
+body.ambulance-dark-mode .ambulance-settings-header h1 {
+  color: #fff;
+}
+
+body.ambulance-dark-mode .ambulance-settings-header p {
+  color: #aaa;
+}
+
+body.ambulance-dark-mode .ambulance-settings-section {
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body.ambulance-dark-mode .ambulance-settings-section h2 {
+  color: #fff;
+  border-color: #3d3d3d;
+}
+
+body.ambulance-dark-mode .ambulance-profile-image {
+  border-color: #4CAF50;
+}
+
+body.ambulance-dark-mode .ambulance-change-photo-btn {
+  background-color: #3d3d3d;
+  border-color: #4d4d4d;
+  color: #fff;
+}
+
+body.ambulance-dark-mode .ambulance-change-photo-btn:hover {
+  background-color: #4d4d4d;
+}
+
+body.ambulance-dark-mode .ambulance-form-group label {
+  color: #aaa;
+}
+
+body.ambulance-dark-mode .ambulance-form-group input {
+  background-color: #3d3d3d;
+  border-color: #4d4d4d;
+  color: #fff;
+}
+
+body.ambulance-dark-mode .ambulance-form-group input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+body.ambulance-dark-mode .ambulance-setting-item {
+  border-color: #3d3d3d;
+}
+
+body.ambulance-dark-mode .ambulance-setting-info h3 {
+  color: #fff;
+}
+
+body.ambulance-dark-mode .ambulance-setting-info p {
+  color: #aaa;
+}
+
+body.ambulance-dark-mode .ambulance-save-settings-btn {
+  background-color: #4CAF50;
+}
+
+body.ambulance-dark-mode .ambulance-save-settings-btn:hover {
+  background-color: #45a049;
+}
+
+/* Loading State */
+.ambulance-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .ambulance-sidebar {
+    position: fixed;
+    width: 250px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .ambulance-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .ambulance-main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .ambulance-profile-settings {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .ambulance-profile-form {
+    grid-template-columns: 1fr;
+  }
+
+  .ambulance-settings-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ambulance-save-message {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ambulance-sidebar {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+  }
+
+  .ambulance-main-content {
+    margin-left: 0;
+  }
+
+  .ambulance-dashboard {
+    flex-direction: column;
+  }
+
+  .ambulance-settings-wrapper {
+    padding: 15px;
+  }
+
+  .ambulance-settings-section {
+    padding: 15px;
+  }
+
+  .ambulance-setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ambulance-setting-control {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Loading and spinner styles */
+.ambulance-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #3498db;
+}
+
+.ambulance-spinner-icon {
+  animation: spin 1s linear infinite;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.ambulance-button-spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Profile placeholder */
+.ambulance-profile-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Status message styling */
+.ambulance-save-message {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 14px;
+  animation: fadeInOut 3s ease;
+}
+
+.ambulance-save-message.success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid #2ecc71;
+}
+
+.ambulance-save-message.error {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.ambulance-status-icon {
+  margin-right: 8px;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Button disabled state */
+.ambulance-save-settings-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Remove dark mode styles */
+.ambulance-dark-mode {
+  display: none;
+}
+
+/* Input change animation */
+.ambulance-input-changed {
+  animation: inputHighlight 0.5s ease;
+}
+
+@keyframes inputHighlight {
+  0% { background-color: rgba(52, 152, 219, 0.1); }
+  100% { background-color: transparent; }
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.ambulance-form-group input.error {
+  border-color: #dc3545;
+  background-color: #fff;
+}
+
+.ambulance-form-group input.error:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.photo-error {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #fff3f3;
+  border-radius: 4px;
+  border-left: 4px solid #dc3545;
+}
+
+/* Animation for input changes */
+@keyframes inputChanged {
+  0% {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  100% {
+    border-color: #ced4da;
+    box-shadow: none;
+  }
+}
+
+.ambulance-input-changed {
+  animation: inputChanged 0.5s ease-out;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .error-message {
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  .ambulance-form-group input.error {
+    border: 2px solid #ff0000;
+  }
+  
+  .photo-error {
+    border: 2px solid #ff0000;
+    background-color: #ffffff;
+  }
+} 

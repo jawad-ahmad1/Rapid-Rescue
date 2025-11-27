@@ -1,5 +1,23 @@
 # 🚑 Rapid-Rescue
 
+## Experimental Results
+
+To ensure optimal performance, I conducted systematic experiments using different YOLOv8 model sizes (Nano, Small, Medium) and classification approaches. 
+
+Initially, I attempted a **Two-Class** approach (classifying "Accident" vs "Non-Accident"). However, the "Non-Accident" class introduced significant noise. By switching to a **Single-Class** detection approach (focusing purely on "Accident"), I significantly improved the model's precision.
+
+| Model | Batch Size | Epochs | Precision | Recall | F1-Score | Approach |
+|-------|-----------|--------|-----------|--------|----------|----------|
+| YOLOv8n | 16 | 50 | 55% | 51% | 53% | Two-Class (Accident/Non-Accident) |
+| YOLOv8s | 32 | 50 | 71% | 65% | 68% | Two-Class (Accident/Non-Accident) |
+| YOLOv8m | 32 | 50 | 78% | 70% | 74% | Two-Class (Accident/Non-Accident) |
+| **YOLOv8m** | **64** | **100** | **91%** | **83%** | **87%** | **Single-Class (Accident Only)** |
+
+**Key Findings:**
+- **Model Selection:** The medium model (v8m) offered the best balance of feature extraction capability for complex accident scenes compared to nano and small variants.
+- **Class Strategy:** Removing the "Non-Accident" class was the critical turning point, yielding a ~13% jump in precision.
+- **Convergence:** Extending training to 100 epochs with a larger batch size allowed the model to generalize better on the validation set.
+
 **Full-stack emergency response platform with real-time AI accident detection**
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
